@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+            android:id="@+id/action_go_my_book"
+            android:enabled="true"
+            android:icon="@drawable/baseline_menu_book_24"
+            android:title="My book"
+            app:showAsAction="ifRoom" />
+
+
+    <item
+            android:id="@+id/action_add_by_list"
+            android:enabled="true"
+            android:icon="@drawable/ic_shopping_cart_black_24dp"
+            android:title="Add by list"
+            app:showAsAction="ifRoom" />
+
+    <item
+            android:id="@+id/action_add_read_list"
+            android:enabled="true"
+            android:icon="@drawable/ic_remove_red_eye_black_24dp"
+            android:title="Add read list"
+            app:showAsAction="ifRoom" />
+</menu>

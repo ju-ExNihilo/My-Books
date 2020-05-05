@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:background="@drawable/wood"
+        tools:context=".mysavebooks.MySaveBooksActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_save_activity"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/activity_save_menu"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:title="@string/app_name">
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/table_layout"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:tabIndicatorHeight="3dp">
+
+        <com.google.android.material.tabs.TabItem
+                android:id="@+id/by_item"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="wrap_content"
+                android:text="@string/tab_by_title"/>
+
+        <com.google.android.material.tabs.TabItem
+                android:id="@+id/read_item"
+                android:text="@string/tab_read_title"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="wrap_content"/>
+
+    </com.google.android.material.tabs.TabLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

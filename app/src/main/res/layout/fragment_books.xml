@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:background="@drawable/wood"
+             android:orientation="vertical"
+             tools:context=".accueil.BooksListFragment">
+
+
+
+        <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/search_books"
+                        android:layout_weight="85"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorWhite"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        app:boxBackgroundMode="outline"
+                        android:hint="@string/search1"
+                        app:boxStrokeWidth="2dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                        android:layout_weight="15"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/search_btn"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="2dp"
+                        android:textAlignment="center"
+                        android:text="@string/go"
+                        android:textSize="20sp"
+                        android:id="@+id/search_btn"
+                        android:textStyle="bold|italic"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/title_for_search"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="8dp"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/title_text_search"
+                        android:layout_width="246dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="20dp"
+                        android:paddingStart="20dp"
+                        android:layout_marginEnd="40dp"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginTop="11dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/border"
+                        android:text="Result of Search"
+                        android:shadowDx="@dimen/detail_text_shadow"
+                        android:shadowDy="@dimen/detail_text_shadow"
+                        android:shadowRadius="@dimen/detail_text_shadow_radius"
+                        android:shadowColor="@color/colorPrimaryDark"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="25sp"
+                        android:textStyle="bold|italic" tools:ignore="RtlSymmetry"/>
+
+                <ImageButton
+                        android:id="@+id/item_navigate_button3"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="5dp"
+                        android:elevation="8dp"
+                        app:srcCompat="@drawable/ic_arrow_forward_black_24dp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_of_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/book_item"/>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/card_book_of_the_day"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp">
+            <TextView
+                    android:id="@+id/title_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="20dp"
+                    android:paddingStart="20dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginTop="11dp"
+                    android:paddingBottom="5dp"
+                    android:background="@drawable/border"
+                    android:text="@string/book_of_the_day"
+                    android:shadowDx="@dimen/detail_text_shadow"
+                    android:shadowDy="@dimen/detail_text_shadow"
+                    android:shadowRadius="@dimen/detail_text_shadow_radius"
+                    android:shadowColor="@color/colorPrimaryDark"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="25sp"
+                    android:textStyle="bold|italic" tools:ignore="RtlSymmetry"/>
+
+            <LinearLayout
+                    android:layout_marginTop="55dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                <ImageView
+                        android:id="@+id/book_image_of_the_day"
+                        android:layout_width="122dp"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/book"
+                        android:scaleType="fitXY"
+                        android:layout_height="148dp"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    <TextView
+                            android:id="@+id/title_book_of_the_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:paddingBottom="5dp"
+                            android:shadowDx="@dimen/detail_text_shadow"
+                            android:shadowDy="@dimen/detail_text_shadow"
+                            android:shadowRadius="@dimen/detail_text_shadow_radius"
+                            android:shadowColor="@color/colorPrimaryDark"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp"
+                            android:textStyle="bold|italic" tools:ignore="RtlSymmetry"/>
+                    <TextView
+                            android:id="@+id/author_book_of_the_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="20dp"
+                            android:paddingStart="20dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginTop="-8dp"
+                            android:textSize="10sp"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="italic" tools:ignore="RtlSymmetry,SmallSp"/>
+
+                    <TextView
+                            android:id="@+id/desc_book_of_the_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scrollbars="vertical"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="13sp"
+                            android:textColor="@color/colorPrimary" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/roman_title"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="5dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/title_roman"
+                            android:layout_width="246dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="20dp"
+                            android:paddingStart="20dp"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="11dp"
+                            android:paddingBottom="5dp"
+                            android:background="@drawable/border"
+                            android:text="@string/most_recent"
+                            android:shadowDx="@dimen/detail_text_shadow"
+                            android:shadowDy="@dimen/detail_text_shadow"
+                            android:shadowRadius="@dimen/detail_text_shadow_radius"
+                            android:shadowColor="@color/colorPrimaryDark"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="25sp"
+                            android:textStyle="bold|italic" tools:ignore="RtlSymmetry"/>
+
+                    <ImageButton
+                            android:id="@+id/item_navigate_button"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:elevation="8dp"
+                            app:srcCompat="@drawable/ic_arrow_forward_black_24dp"/>
+
+                </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_book_roman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp"
+                    app:layoutManager="LinearLayoutManager"
+                    tools:listitem="@layout/book_item"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/other_title"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="25dp">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                    <TextView
+                            android:id="@+id/title_other"
+                            android:layout_width="246dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="20dp"
+                            android:paddingStart="20dp"
+                            android:layout_marginEnd="40dp"
+                            android:layout_marginBottom="15dp"
+                            android:layout_marginTop="11dp"
+                            android:paddingBottom="5dp"
+                            android:background="@drawable/border"
+                            android:text="@string/most_popular"
+                            android:shadowDx="@dimen/detail_text_shadow"
+                            android:shadowDy="@dimen/detail_text_shadow"
+                            android:shadowRadius="@dimen/detail_text_shadow_radius"
+                            android:shadowColor="@color/colorPrimaryDark"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="25sp"
+                            android:textStyle="bold|italic" tools:ignore="RtlSymmetry"/>
+
+                    <ImageButton
+                            android:id="@+id/item_navigate_button2"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginEnd="5dp"
+                            android:elevation="8dp"
+                            app:srcCompat="@drawable/ic_arrow_forward_black_24dp"/>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/list_book_autres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        app:layoutManager="LinearLayoutManager"
+                        tools:listitem="@layout/book_item"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

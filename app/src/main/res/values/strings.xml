@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">My Books</string>
+    <string name="app_name1">All Books</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="download">Downloading...</string>
+    <string name="empty_label"/>
+    <string name="navHeader_picture">nav_hearder_desc</string>
+    <string name="search_by">Julien</string>
+    <string name="search">search</string>
+    <string name="link">&lt;a href=&quot;%1$s&quot;/>%2$s</string>
+    <string name="no_result">No Result</string>
+    <string name="no_wifi">No wifi</string>
+    <string name="tab_by_title">My By List</string>
+    <string name="tab_read_title">My Read List</string>
+
+    //Details view
+    <string name="in_read_list">In Read List</string>
+    <string name="in_by_list">In By List</string>
+    <string name="add_by_list_toast">Add to by list</string>
+    <string name="add_read_list_toast">Add to reading list</string>
+    <string name="sup_by_list_toast">Suppress to by list</string>
+    <string name="sup_read_list_toast">Suppress to reading list</string>
+    <string name="add_by_list_menu">Add by list</string>
+    <string name="add_read_list_menu">Add read list</string>
+    <string name="similar_books">Similar Books</string>
+    <string name="by_link">By Link :</string>
+    <string name="e_book">E-book :</string>
+    <string name="price">Price :</string>
+
+    //test view
+    <string name="desc_test">Jusque-là, nous parlions de classes unitaires, mais un domaine c\'est souvent un ensemble
+        de classes liées entre elles.
+        Dans ce chapitre, nous allons aborder plus en détail la façon de relier
+        les classes pour former un tout. Nous verrons comment représenter ceci en UML et comment cela se traduit en
+        termes de base de données relationnelle.
+    </string>
+
+    //Animation
+    <string name="transition_animation">transition_animation</string>
+
+    //Accueil
+    <string name="book_of_the_day">Book of the day</string>
+    <string name="most_recent">Most Recent</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="search1">Search</string>
+    <string name="go">GO</string>
+
+</resources>

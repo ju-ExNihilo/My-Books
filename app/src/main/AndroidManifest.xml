@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="fr.julien.mybooks">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <activity
+                android:name=".allbooks.AllBooksActivity"
+                android:label="@string/empty_label"
+                android:parentActivityName=".accueil.BooksListActivity"
+                android:theme="@style/AppTheme1"/>
+
+        <activity
+                android:name=".mysavebooks.MySaveBooksActivity"
+                android:label="@string/empty_label"
+                android:parentActivityName=".accueil.BooksListActivity"
+                android:theme="@style/AppTheme1"/>
+        <activity
+                android:name=".details.DetailsActivity"
+                android:label="@string/empty_label"
+                android:parentActivityName=".accueil.BooksListActivity"
+                android:theme="@style/AppTheme1"/>
+        <activity
+                android:name=".accueil.BooksListActivity"
+                android:windowSoftInputMode="stateUnchanged">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
