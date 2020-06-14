@@ -16,7 +16,7 @@ public class Item {
     @SerializedName("accessInfo")
     @Expose
     private AccessInfo accessInfo;
-
+    
     public String getId() {
         return id;
     }
